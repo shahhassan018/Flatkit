@@ -1,0 +1,33 @@
+#button{
+    background: #859df7;
+    color: white;
+    width: 50%;
+    margin-left: 25%;
+    text-transform: capitalize;
+}
+#chart_div1{
+    display: none;
+}
+#btnindigo{
+    color: white;
+    width: 30%;
+    margin-left: 15%;
+    text-transform: capitalize;
+    background: indigo;
+    font-size: 18px;
+}
+#btngreen{
+    color: white;
+    width: 30%;
+    margin-right: 16%;
+    text-transform: capitalize;
+    background: green;
+    font-size: 18px;
+}
+.line{
+    text-align: center;
+}
+
+.dollar{
+    margin-left: 35%;
+}

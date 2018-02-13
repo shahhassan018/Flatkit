@@ -1,0 +1,419 @@
+
+
+<app-sidebar></app-sidebar>
+<div class="p-a white lt box-shadow">
+<!-- style="margin-top: 4%;
+margin-left: 201px;"> -->
+        <div class="row">
+            <div class="col-sm-6">
+                <h4 class="mb-0 _300">Welcome to Flatkit</h4>
+                <small class="text-muted">Bootstrap <strong>4</strong> Web App Kit with AngularJS</small>
+            </div>
+            <div class="col-sm-6 text-sm-right">
+                <div class="m-y-sm">
+                    <span class="m-r-sm">Start manage:</span>
+                    <div class="btn-group dropdown">
+                      <button class="btn white btn-sm ">Projects</button>
+                      <button class="btn white btn-sm dropdown-toggle" data-toggle="dropdown"></button>
+                      <div class="dropdown-menu dropdown-menu-scale pull-right">
+                        <a class="dropdown-item" href>Members</a>
+                        <a class="dropdown-item" href>Tasks</a>
+                        <a class="dropdown-item" href>Inbox</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item">Profile</a>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="padding">
+        <div class="row">
+            <div class="col-xs-12 col-sm-4">
+                <div class="box p-a">
+                  <div class="pull-left m-r">
+                    <span class="w-48 rounded  accent">
+                      <i class="material-icons">&#xe151;</i>
+                    </span>
+                  </div>
+                  <div class="clear">
+                    <h4 class="m-0 text-lg _300"><a href>125 <span class="text-sm">Emails</span></a></h4>
+                    <small class="text-muted">6 new arrivals.</small>
+                  </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-4">
+                <div class="box p-a">
+                  <div class="pull-left m-r">
+                    <span class="w-48 rounded primary">
+                      <i class="material-icons">&#xe54f;</i>
+                    </span>
+                  </div>
+                  <div class="clear">
+                    <h4 class="m-0 text-lg _300"><a href>40 <span class="text-sm">Projects</span></a></h4>
+                    <small class="text-muted">38 open.</small>
+                  </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-4">
+                <div class="box p-a">
+                  <div class="pull-left m-r">
+                    <span class="w-48 rounded warn">
+                      <i class="material-icons">&#xe8d3;</i>
+                    </span>
+                  </div>
+                  <div class="clear">
+                    <h4 class="m-0 text-lg _300"><a href>600 <span class="text-sm">Users</span></a></h4>
+                    <small class="text-muted">632 vips.</small>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+      
+               
+      <div class="col-sm-6">
+            <div class="box">
+              <div class="box-header">
+                <h3>Basic Column
+                    <div class="icons" style="float:right; width:55px;">
+                        <i style="background:#2f3044; color:white" class="fa fa-bar-chart"></i>
+                        <i style="background:#2f3044; color:white"class="fa fa-area-chart"></i>
+                </div>
+                </h3>
+               
+                
+                <!-- <small class="block text-muted">label, animation</small> -->
+                <mat-form-field>
+                        <input matInput [matDatepicker]="picker1" placeholder="Start Date">
+                        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                        <mat-datepicker #picker1></mat-datepicker>
+                </mat-form-field>
+
+                <mat-form-field>
+                            <input matInput [matDatepicker]="picker2" placeholder="End Date">
+                            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                            <mat-datepicker #picker2></mat-datepicker>
+                </mat-form-field>
+              </div>
+              <div class="box-body">
+                    <div id="chart_div"
+                            style="width: 100% !important; height: 300px;">
+                    </div>
+
+                    <div id="chart_div1" style="width: 100% !important; height: 300px;"></div>
+                    
+              </div>
+            </div>
+          </div>
+                <div class="col-sm-6">
+                        <div class="box">
+                            <div class="box-header">
+                            <h3>Nested Pie</h3>
+                            <!-- <small class="block text-muted">set multiple pies' centers and radii</small> -->
+                            <mat-form-field>
+                                    <input matInput [matDatepicker]="picker3" placeholder="Start Date">
+                                    <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+                                    <mat-datepicker #picker3></mat-datepicker>
+                            </mat-form-field>
+            
+                            <mat-form-field>
+                                        <input matInput [matDatepicker]="picker4" placeholder="End Date">
+                                        <mat-datepicker-toggle matSuffix [for]="picker4"></mat-datepicker-toggle>
+                                        <mat-datepicker #picker4></mat-datepicker>
+                            </mat-form-field>
+                            </div>
+                            <div class="box-body">
+                                    <div id="piechart_3d" style="width: 100% !important; height: 300px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                      <div class=" col-md-4">
+                            <div class="box">
+                                <div class="box-header">
+                                    <h3>Scanner</h3>
+                                    <small>20 finished, 5 remaining</small>
+                                </div>
+                                <div class="box-tool">
+                                    <ul class="nav">
+                                      <li class="nav-item inline dropdown">
+                                        <a class="nav-link text-muted p-x-xs" data-toggle="dropdown">
+                                          <i class="fa fa-ellipsis-v"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-scale pull-right">
+                                          <a class="dropdown-item" href>New task</a>
+                                          <a class="dropdown-item" href>Make all finished</a>
+                                          <a class="dropdown-item" href>Make all unfinished</a>
+                                          <div class="dropdown-divider"></div>
+                                          <a class="dropdown-item">Settings</a>
+                                        </div>
+                                      </li>
+                                    </ul>
+                                </div>
+                                <div class="box-body">
+                                      <div class="streamline b-l m-l">
+                                        <div class="sl-item b-success">
+                                          <div class="sl-icon">
+                                            <i class="fa fa-check"></i>
+                                          </div>
+                                          <div class="sl-content">
+                                            <div class="sl-date text-muted">8:30</div>
+                                            <div>Call to customer <a href class="text-info">Jacob</a> and discuss the detail about the AP project.</div>
+                                          </div>
+                                        </div>
+                                        <div class="sl-item b-info">
+                                          <div class="sl-content">
+                                            <div class="sl-date text-muted">Sat, 5 Mar</div>
+                                            <div>Prepare for presentation</div>
+                                          </div>
+                                        </div>
+                                        <div class="sl-item b-warning">
+                                          <div class="sl-content">
+                                            <div class="sl-date text-muted">Sun, 11 Feb</div>
+                                            <div><a href class="text-info">Jessi</a> assign you a task <a href class="text-info">Mockup Design</a>.</div>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                  <div class="box-footer">
+                                
+                                      <a href class="btn btn-sm white text-u-c" id="button">All Scans</a>
+                                  </div>
+                              </div>
+                        </div>
+                       
+                        <div class="col-md-4">
+                                <div class="box">
+                                       
+                                    <div class="box-header">
+                                            
+                                        <h3>Activity</h3>
+                                  
+                                        <small>10 members update their activies.</small>
+                                    </div>
+                                    <div class="box-body">
+                                        
+                                          <div class="streamline b-l m-b m-l">
+                                          <div class="sl-item">
+                                            <div class="sl-left">
+                                              <img src="../assets/images/a2.jpg" class="img-circle">
+                                            </div>
+                                            <div class="sl-content">
+                                              <a href class="text-info">Louis Elliott</a><span class="m-l-sm sl-date">5 min ago</span>
+                                              <div>assign you a task <a href class="text-info">Mockup Design</a>.</div>
+                                            </div>
+                                          </div>
+                                          <div class="sl-item">
+                                            <div class="sl-left">
+                                              <img src="../assets/images/a5.jpg" class="img-circle">
+                                            </div>
+                                            <div class="sl-content">
+                                              <a href class="text-info">Terry Moore</a><span class="m-l-sm sl-date">10 min ago</span>
+                                              <div>Follow up to close deal</div>
+                                            </div>
+                                          </div>
+                                          <div class="sl-item">
+                                            <div class="sl-left">
+                                              <img src="../assets/images/a8.jpg" class="img-circle">
+                                            </div>
+                                            <div class="sl-content">
+                                              <a href class="text-info">Walter Paler</a><span class="m-l-sm sl-date">1 hour ago</span>
+                                              <div>was added to Repo</div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <a href class="btn btn-sm white text-u-c m-y-xs" id="button">All Activity</a>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                    <div class="box">
+                                        <div class="box-header">
+                                        
+                                            <h3>Banner will come Here</h3>
+                                           <small>Banners will come </small>
+                                        </div>
+                                        <div class="box-body">
+                                              <div class="streamline b-l m-b m-l">
+                                              <div class="sl-item">
+                                                <div class="sl-left">
+                                                  <img src="../assets/images/a2.jpg" class="img-circle">
+                                                </div>
+                                                <div class="sl-content">
+                                                  <a href class="text-info">Louis Elliott</a><span class="m-l-sm sl-date">5 min ago</span>
+                                                  <div>assign you a task <a href class="text-info">Mockup Design</a>.</div>
+                                                </div>
+                                              </div>
+                                              <div class="sl-item">
+                                                <div class="sl-left">
+                                                  <img src="../assets/images/a5.jpg" class="img-circle">
+                                                </div>
+                                                <div class="sl-content">
+                                                  <a href class="text-info">Terry Moore</a><span class="m-l-sm sl-date">10 min ago</span>
+                                                  <div>Follow up to close deal</div>
+                                                </div>
+                                              </div>
+                                              <div class="sl-item">
+                                                <div class="sl-left">
+                                                  <img src="../assets/images/a8.jpg" class="img-circle">
+                                                </div>
+                                                <div class="sl-content">
+                                                  <a href class="text-info">Walter Paler</a><span class="m-l-sm sl-date">1 hour ago</span>
+                                                  <div>was added to Repo</div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <a href class="btn btn-sm white text-u-c m-y-xs" id="button">Banners</a>
+                                          </div>
+                                    </div>
+                                </div>
+                       
+                    </div>
+                    
+                       
+                 <div class="row">
+                
+                       
+                            <div class="col-md-3">
+                                    <div class="box">
+                                        <div class="item">
+                                            <div class="item-overlay active p-a">
+                                        
+                                                <a href class="pull-left text-u-c label label-md info">Travel</a>
+                                            </div>
+                                            <img src="../assets/images/c2.jpg" class="w-full">
+                                        </div>
+                                        <div class="p-a">
+                                            <div class="m-b h-2x"><a href class="_800">
+                                                20 Beaches That Are Better in the Off-Season</a></div>
+                                            <p class="h-3x">Titudin venenatis ipsum ac feugiat. 
+                                                Vestibulum ullamcorper quam.
+                                                Titudin venenatis ipsum ac feugiat.
+                                                Titudin venenatis ipsum ac feugiat.</p>
+                                                <h5 class="dollar"><b>$19.<sup>99</sup></b></h5>
+                                               <p class="line">Free Shipping by <b>ePacket</b></p> 
+                                               <div class="buttons">
+                                                    <a href class="btn btn-xs white pull-left" id=btnindigo>Indigo</a>
+                                                    <a href class="btn btn-xs white pull-right" id=btngreen>Green</a>
+                                               </div>
+                                                <div class="clearfix"></div>
+                                            
+                                        </div>
+                                    </div>
+                                </div> 
+
+                                <div class="col-md-3">
+                                        <div class="box">
+                                            <div class="item">
+                                                <div class="item-overlay active p-a">
+                                            
+                                                    <a href class="pull-left text-u-c label label-md info">Travel</a>
+                                                </div>
+                                                <img src="../assets/images/c2.jpg" class="w-full">
+                                            </div>
+                                            <div class="p-a">
+                                                <div class="m-b h-2x"><a href class="_800">
+                                                    20 Beaches That Are Better in the Off-Season</a></div>
+                                                <p class="h-3x">Titudin venenatis ipsum ac feugiat. 
+                                                    Vestibulum ullamcorper quam.
+                                                    Titudin venenatis ipsum ac feugiat.
+                                                    Titudin venenatis ipsum ac feugiat.</p>
+                                                    <h5 class="dollar"><b>$19.<sup>99</sup></b></h5>
+                                                   <p class="line">Free Shipping by <b>ePacket</b></p> 
+                                                   <div class="buttons">
+                                                        <a href class="btn btn-xs white pull-left" id=btnindigo>Indigo</a>
+                                                        <a href class="btn btn-xs white pull-right" id=btngreen>Green</a>
+                                                   </div>
+                                                    <div class="clearfix"></div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div> 
+
+                                    <div class="col-md-3">
+                                            <div class="box">
+                                                <div class="item">
+                                                    <div class="item-overlay active p-a">
+                                                
+                                                        <a href class="pull-left text-u-c label label-md info">Travel</a>
+                                                    </div>
+                                                    <img src="../assets/images/c2.jpg" class="w-full">
+                                                </div>
+                                                <div class="p-a">
+                                                    <div class="m-b h-2x"><a href class="_800">
+                                                        20 Beaches That Are Better in the Off-Season</a></div>
+                                                    <p class="h-3x">Titudin venenatis ipsum ac feugiat. 
+                                                        Vestibulum ullamcorper quam.
+                                                        Titudin venenatis ipsum ac feugiat.
+                                                        Titudin venenatis ipsum ac feugiat.</p>
+                                                        <h5 class="dollar"><b>$19.<sup>99</sup></b></h5>
+                                                       <p class="line">Free Shipping by <b>ePacket</b></p> 
+                                                       <div class="buttons">
+                                                            <a href class="btn btn-xs white pull-left" id=btnindigo>Indigo</a>
+                                                            <a href class="btn btn-xs white pull-right" id=btngreen>Green</a>
+                                                       </div>
+                                                        <div class="clearfix"></div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div> 
+
+                                <div class="col-md-3">
+                                        <div class="box">
+                                            <div class="item">
+                                                <div class="item-overlay active p-a">
+                                            
+                                                    <a href class="pull-left text-u-c label label-md info">Travel</a>
+                                                </div>
+                                                <img src="../assets/images/c2.jpg" class="w-full">
+                                            </div>
+                                            <div class="p-a">
+                                                <div class="m-b h-2x"><a href class="_800">
+                                                    20 Beaches That Are Better in the Off-Season</a></div>
+                                                <p class="h-3x">Titudin venenatis ipsum ac feugiat. 
+                                                    Vestibulum ullamcorper quam.
+                                                    Titudin venenatis ipsum ac feugiat.
+                                                    Titudin venenatis ipsum ac feugiat.</p>
+                                                    <h5 class="dollar"><b>$19.<sup>99</sup></b></h5>
+                                                   <p class="line">Free Shipping by <b>ePacket</b></p> 
+                                                   <div class="buttons">
+                                                        <a href class="btn btn-xs white pull-left" id=btnindigo>Indigo</a>
+                                                        <a href class="btn btn-xs white pull-right" id=btngreen>Green</a>
+                                                   </div>
+                                                    <div class="clearfix"></div>
+                                                
+                                                
+                                            </div>
+                                        </div>
+                                    </div> 
+                 </div>       
+        </div>
+
+        <script src="../assets/libs/jquery/jquery/dist/jquery.js"></script>
+        <!-- Bootstrap -->
+          <script src="../assets/libs/jquery/tether/dist/js/tether.min.js"></script>
+           <script src="../assets/libs/jquery/bootstrap/dist/js/bootstrap.js"></script> 
+        <!-- core -->
+           <script src="../assets/libs/jquery/underscore/underscore-min.js"></script>
+           <script src="../assets/libs/jquery/jQuery-Storage-API/jquery.storageapi.min.js"></script>
+           <script src="../assets/libs/jquery/PACE/pace.min.js"></script> 
+        
+           <script src="../assets/scripts/config.lazyload.js"></script>
+        
+          <script src="../assets/scripts/palette.js"></script>
+          <script src="../assets/scripts/ui-load.js"></script>
+          <script src="../assets/scripts/ui-jp.js"></script>
+          <script src="../assets/scripts/ui-include.js"></script>
+          <script src="../assets/scripts/ui-device.js"></script>
+          <script src="../assets/scripts/ui-form.js"></script>
+          <script src="../assets/scripts/ui-nav.js"></script>
+          <script src="../assets/scripts/ui-screenfull.js"></script>
+          <script src="../assets/scripts/ui-scroll-to.js"></script>
+          <script src="../assets/scripts/ui-toggle-class.js"></script>
+          <script src="../assets/scripts/app.js"></script>
+        
+          <!-- ajax -->
+          <script src="../assets/libs/jquery/jquery-pjax/jquery.pjax.js"></script>
+          <script src="../assets/scripts/ajax.js"></script>
+        

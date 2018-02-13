@@ -1,14 +1,180 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Dashboard</title>
-  <base href="/">
+    <base href="/">
+  <meta charset="utf-8" />
+  <title>Flatkit </title>
+  <!-- <meta name="description" content="Admin, Dashboard, Bootstrap, Bootstrap 4, Angular" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- for ios 7 style, multi-resolution icon of 152x152 -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-barstyle" content="black-translucent">
+  <link rel="apple-touch-icon" href="../assets/images/logo.png">
+  <meta name="apple-mobile-web-app-title" content="Flatkit">
+  <!-- for Chrome on Android, multi-resolution icon of 196x196 -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" sizes="196x196" href="../assets/images/logo.png">
+  
+  <!-- style -->
+  <link rel="stylesheet" href="../assets/animate.css/animate.min.css" type="text/css" />
+  <link rel="stylesheet" href="../assets/glyphicons/glyphicons.css" type="text/css" />
+  <link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="../assets/material-design-icons/material-design-icons.css" type="text/css" />
+
+  <link rel="stylesheet" href="../assets/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+  <!-- build:css ../assets/styles/app.min.css -->
+  <link rel="stylesheet" href="../assets/styles/app.css" type="text/css" />
+  <!-- endbuild -->
+  <link rel="stylesheet" href="../assets/styles/font.css" type="text/css" />
 </head>
 <body>
   <app-root></app-root>
-</body>
-</html>
+  <script src="../assets/libs/jquery/jquery/dist/jquery.js"></script>
+  <!-- Bootstrap -->
+    <script src="../assets/libs/jquery/tether/dist/js/tether.min.js"></script>
+    <script src="../assets/libs/jquery/bootstrap/dist/js/bootstrap.js"></script> 
+  <!-- core -->
+     <script src="../assets/libs/jquery/underscore/underscore-min.js"></script>
+     <script src="../assets/libs/jquery/jQuery-Storage-API/jquery.storageapi.min.js"></script>
+     <script src="../assets/libs/jquery/PACE/pace.min.js"></script> 
+  
+     <script src="../assets/scripts/config.lazyload.js"></script>
+  
+    <script src="../assets/scripts/palette.js"></script>
+    <script src="../assets/scripts/ui-load.js"></script>
+    <script src="../assets/scripts/ui-jp.js"></script>
+    <script src="../assets/scripts/ui-include.js"></script>
+    <script src="../assets/scripts/ui-device.js"></script>
+    <script src="../assets/scripts/ui-form.js"></script>
+    <script src="../assets/scripts/ui-nav.js"></script>
+    <script src="../assets/scripts/ui-screenfull.js"></script>
+    <script src="../assets/scripts/ui-scroll-to.js"></script>
+    <script src="../assets/scripts/ui-toggle-class.js"></script>
+    <script src="../assets/scripts/app.js"></script>
+  
+    <!-- ajax -->
+    <script src="../assets/libs/jquery/jquery-pjax/jquery.pjax.js"></script>
+    <script src="../assets/scripts/ajax.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+    google.charts.load('current', {packages: ['corechart', 'bar']});
+google.charts.setOnLoadCallback(drawDualY);
+
+function drawDualY() {
+      var data = new google.visualization.DataTable();
+      data.addColumn('timeofday', 'Time of Day');
+      data.addColumn('number', 'Motivation Level');
+      data.addColumn('number', 'Energy Level');
+
+      data.addRows([
+        [{v: [8, 0, 0], f: '8 am'}, 1, .25],
+        [{v: [9, 0, 0], f: '9 am'}, 2, .5],
+        [{v: [10, 0, 0], f:'10 am'}, 3, 1],
+        [{v: [11, 0, 0], f: '11 am'}, 4, 2.25],
+        [{v: [12, 0, 0], f: '12 pm'}, 5, 2.25],
+        [{v: [13, 0, 0], f: '1 pm'}, 6, 3],
+        [{v: [14, 0, 0], f: '2 pm'}, 7, 4],
+        [{v: [15, 0, 0], f: '3 pm'}, 8, 5.25],
+        [{v: [16, 0, 0], f: '4 pm'}, 9, 7.5],
+        [{v: [17, 0, 0], f: '5 pm'}, 10, 10],
+      ]);
+
+      var options = {
+        chart: {
+          title: 'Motivation and Energy Level Throughout the Day',
+          subtitle: 'Based on a scale of 1 to 10'
+        },
+        series: {
+          0: {axis: 'MotivationLevel'},
+          1: {axis: 'EnergyLevel'}
+        },
+        axes: {
+          y: {
+            MotivationLevel: {label: 'Motivation Level (1-10)'},
+            EnergyLevel: {label: 'Energy Level (1-100)'}
+          }
+        },
+        hAxis: {
+          title: 'Time of Day',
+          format: 'h:mm a',
+          viewWindow: {
+            min: [7, 30, 0],
+            max: [17, 30, 0]
+          }
+        },
+        vAxis: {
+          title: 'Rating (scale of 1-10)'
+        }
+      };
+
+      var materialChart = new google.charts.Bar(document.getElementById('chart_div'));
+      materialChart.draw(data, options);
+    }
+    </script>
+
+<script type="text/javascript">
+  google.charts.load("current", {packages:["corechart"]});
+  google.charts.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Task', 'Hours per Day'],
+      ['Work',     11],
+      ['Eat',      2],
+      ['Commute',  2],
+      ['Watch TV', 2],
+      ['Sleep',    7]
+    ]);
+
+    var options = {
+      title: 'My Daily Activities',
+      is3D: true,
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+    chart.draw(data, options);
+  }
+</script>
+
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Year', 'Sales', 'Expenses'],
+      ['2013',  1000,      400],
+      ['2014',  1170,      460],
+      ['2015',  660,       1120],
+      ['2016',  1030,      540]
+    ]);
+
+    var options = {
+      title: 'Company Performance',
+      hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+      vAxis: {minValue: 0}
+    };
+
+    $('.fa-area-chart').click(function(){
+      // alert('enter');
+      $('#chart_div').hide('slow');
+      $('#chart_div1').show('slow');
+      
+    });
+     
+    $('.fa-bar-chart').click(function(){
+      // alert('enter');
+      $('#chart_div1').hide('slow');
+      $('#chart_div').show('slow');
+      
+    });
+
+    var chart = new google.visualization.AreaChart(document.getElementById('chart_div1'));
+    chart.draw(data, options);
+  }
+</script>
+  <!-- endbuild -->
+  </body>
+  </html>
+  
